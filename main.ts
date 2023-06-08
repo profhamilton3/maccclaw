@@ -8,16 +8,16 @@ radio.onReceivedNumber(function (receivedNumber) {
         runRedBrickMotor(wuKong.MotorList.M2, false, 1)
     } else if (3 == receivedNumber) {
         music.playSoundEffect(music.createSoundEffect(WaveShape.Sawtooth, 5000, 0, 255, 0, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.InBackground)
-        runRedBrickMotor(wuKong.MotorList.M1, true, 1)
+        runRedBrickMotor(wuKong.MotorList.M1, true, 3)
     } else if (4 == receivedNumber) {
         music.playSoundEffect(music.createSoundEffect(WaveShape.Triangle, 5000, 0, 255, 0, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.InBackground)
-        runRedBrickMotor(wuKong.MotorList.M1, false, 1)
+        runRedBrickMotor(wuKong.MotorList.M1, false, 3)
     } else if (5 == receivedNumber) {
         music.playSoundEffect(music.createSoundEffect(WaveShape.Noise, 5000, 0, 255, 0, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.InBackground)
         servos.P2.setAngle(15)
     } else if (6 == receivedNumber) {
         music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 5000, 0, 255, 0, 500, SoundExpressionEffect.Vibrato, InterpolationCurve.Curve), SoundExpressionPlayMode.InBackground)
-        servos.P2.setAngle(75)
+        servos.P2.setAngle(65)
     } else if (7 == receivedNumber) {
         music.playSoundEffect(music.createSoundEffect(WaveShape.Sine, 5000, 0, 255, 0, 500, SoundExpressionEffect.Tremolo, InterpolationCurve.Linear), SoundExpressionPlayMode.InBackground)
         wuKong.setLightMode(wuKong.LightMode.BREATH)
@@ -76,5 +76,5 @@ wuKong.stopAllMotor()
 wuKong.setLightMode(wuKong.LightMode.BREATH)
 radio.setGroup(3)
 radio.setFrequencyBand(33)
-basic.showIcon(IconNames.StickFigure)
+basic.showIcon(IconNames.House)
 radio.sendString("CLAW")
